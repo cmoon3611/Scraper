@@ -4,7 +4,7 @@
     "type": "html",
     "url": "https://asia.nikkei.com/Latestheadlines",
     "selector": ".LatestHeadlinesMainContent_latestHeadlinesMainContent__5s0Rj article h4 > a",
-    "limit": 5,
+    "limit": 3,
     "color": "GREEN",
     "audio": "audio/News Scrape Audio.wav"
   },
@@ -13,7 +13,7 @@
     "type": "html",
     "url": "https://www.morpheus-research.com/",
     "selector": "#gh-main > div > article > a > header > h2",
-    "limit": 5,
+    "limit": 3,
     "color": "RED",
     "audio": "audio/Short Report Scrape Audio.wav"
   },
@@ -21,7 +21,7 @@
     "name": "Nikkei Asia (RSS)",
     "type": "rss",
     "url": "https://asia.nikkei.com/rss/feed/nar",
-    "limit": 5,
+    "limit": 3,
     "color": "GREEN",
     "audio": "audio/News Scrape Audio.wav"
   },
@@ -29,7 +29,7 @@
     "name": "STAT News (RSS)",
     "type": "rss",
     "url": "https://www.statnews.com/feed/",
-    "limit": 5,
+    "limit": 3,
     "color": "GREEN",
     "audio": "audio/News Scrape Audio.wav"
   },
@@ -38,7 +38,7 @@
     "type": "html",
     "url": "https://fuzzypandaresearch.com/",
     "selector": "div.post > header > h2 > a",
-    "limit": 5,
+    "limit": 3,
     "color": "RED",
     "audio": "audio/Short Report Scrape Audio.wav"
   }

@@ -71,7 +71,7 @@ def main():
 
         for f in filings_8k:
             ticker = get_ticker_from_title(f["title"])
-            ticker_str = f"{Fore.RED}{Back.LIGHTBLACK_EX}{ticker}{Style.RESET_ALL} | " if ticker else ""
+            ticker_str = f"{Fore.RED}{ticker}{Style.RESET_ALL} | " if ticker else ""
             cleaned_title = f["title"].replace("8-K - ", "").replace("8-K ", "")
             all_filings.append({
                 "key": (f["title"], f["link"]),
@@ -81,7 +81,7 @@ def main():
 
         for f in filings_6k:
             ticker = get_ticker_from_title(f["title"])
-            ticker_str = f"{Fore.RED}{Back.LIGHTBLACK_EX}{ticker}{Style.RESET_ALL} | " if ticker else ""
+            ticker_str = f"{Fore.RED}{ticker}{Style.RESET_ALL} | " if ticker else ""
             cleaned_title = f["title"].replace("6-K - ", "").replace("6-K ", "")
             all_filings.append({
                 "key": (f["title"], f["link"]),

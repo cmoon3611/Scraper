@@ -27,7 +27,7 @@ def get_filing_html_url(index_url):
             return index_url
 
         headers = {
-            "User-Agent": "MyResearchBot/1.0 (your-email@example.com)"
+            "User-Agent": "Chris Moon (cmoon@trlm.com)"
         }
 
         response = requests.get(index_url, headers=headers, timeout=10)
