@@ -21,6 +21,7 @@ COLOR_MAP = {
 SHOW_SCRAPE_TIMES = False  # Toggle this to enable/disable scrape time output
 
 audio_players = {}
+last_seen_set = set()  # Tracks (source, link) for opened headlines
 
 def play_audio_for_source(audio_path):
     audio_abs_path = os.path.abspath(audio_path)
@@ -41,7 +42,7 @@ def play_audio_for_source(audio_path):
 
 def main():
     print("[INFO] Starting website headline scraper (RSS + HTML)...")
-    last_seen_set = set()
+    global last_seen_set
 
     while True:
         try:
@@ -57,15 +58,11 @@ def main():
             time.sleep(1)
             continue
 
-        current_set = set((h['source'], h['title']) for h in headlines)
+        # Filter only new headlines that haven't been seen before
+        new_headlines = [h for h in headlines if (h['source'], h['link']) not in last_seen_set]
 
-        if current_set != last_seen_set:
+        if new_headlines:
             print("[INFO] Update detected!\n")
-
-            # Process only new headlines (not seen before)
-            new_items = current_set - last_seen_set
-            new_headlines = [h for h in headlines if (h['source'], h['title']) in new_items]
-
             grouped = group_headlines_by_type(new_headlines)
 
             for group in ["RSS", "HTML"]:
@@ -79,7 +76,8 @@ def main():
                     if audio_path:
                         play_audio_for_source(audio_path)
 
-            last_seen_set = current_set
+            # Update seen headlines
+            last_seen_set.update((h['source'], h['link']) for h in new_headlines)
 
         time.sleep(1)
 
