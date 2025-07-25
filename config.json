@@ -4,7 +4,7 @@
     "type": "html",
     "url": "https://asia.nikkei.com/Latestheadlines",
     "selector": ".LatestHeadlinesMainContent_latestHeadlinesMainContent__5s0Rj article h4 > a",
-    "limit": 3,
+    "limit": 2,
     "color": "GREEN",
     "audio": "audio/News Scrape Audio.wav"
   },
@@ -13,7 +13,7 @@
     "type": "html",
     "url": "https://www.morpheus-research.com/",
     "selector": "#gh-main > div > article > a > header > h2",
-    "limit": 3,
+    "limit": 2,
     "color": "RED",
     "audio": "audio/Short Report Scrape Audio.wav"
   },
@@ -21,15 +21,16 @@
     "name": "Nikkei Asia (RSS)",
     "type": "rss",
     "url": "https://asia.nikkei.com/rss/feed/nar",
-    "limit": 3,
+    "limit": 2,
     "color": "GREEN",
     "audio": "audio/News Scrape Audio.wav"
   },
   {
-    "name": "STAT News (RSS)",
-    "type": "rss",
-    "url": "https://www.statnews.com/feed/",
-    "limit": 3,
+    "name": "STAT News (HTML)",
+    "type": "html",
+    "url": "https://www.statnews.com/latest/",
+    "selector": "a.topic-block__preview-title",
+    "limit": 2,
     "color": "GREEN",
     "audio": "audio/News Scrape Audio.wav"
   },
@@ -38,8 +39,53 @@
     "type": "html",
     "url": "https://fuzzypandaresearch.com/",
     "selector": "div.post > header > h2 > a",
-    "limit": 3,
+    "limit": 2,
     "color": "RED",
     "audio": "audio/Short Report Scrape Audio.wav"
-  }
+  },
+  {
+    "name": "CBS News - Jennifer Jacobs (HTML)",
+    "type": "html",
+    "url": "https://www.cbsnews.com/team/jennifer-jacobs/",
+    "selector": "h4.item__hed",
+    "limit": 2,
+    "color": "GREEN",
+    "audio": "audio/News Scrape Audio.wav"
+  },
+{
+  "name": "HNTRBRK Breaking News (HTML)",
+  "type": "html",
+  "url": "https://hntrbrk.com/category/breaking-news/",
+  "selector": "#main > div > article:nth-child(1) > h2 > a",
+  "limit": 2,
+  "color": "GREEN",
+  "audio": "audio/News Scrape Audio.wav"
+},
+{
+  "name": "HNTRBRK Investigations (HTML)",
+  "type": "html",
+  "url": "https://hntrbrk.com/category/investigations/",
+  "selector": "#main > div > article:nth-child(1) > h2 > a",
+  "limit": 2,
+  "color": "GREEN",
+  "audio": "audio/News Scrape Audio.wav"
+},
+{
+    "name": "Josh Kosman (RSS)",
+    "type": "rss",
+    "url": "https://nypost.com/author/josh-kosman/feed/",
+    "limit": 2,
+    "color": "GREEN",
+    "audio": "audio/News Scrape Audio.wav"
+},
+{
+  "name": "Culper Research (HTML)",
+  "type": "html",
+  "url": "https://culperresearch.com/latest-research",
+  "selector": "div.x-el-div > div > a > div > span > span",
+  "limit": 1,
+  "color": "RED",
+  "audio": "audio/Short Report Scrape Audio.wav"
+}
+
 ]
