@@ -86,6 +86,15 @@
   "limit": 1,
   "color": "RED",
   "audio": "audio/Short Report Scrape Audio.wav"
+},
+  {
+  "name": "Ming-Chi Kuo (Medium)",
+  "type": "rss",
+  "url": "https://medium.com/@mingchikuo/feed",
+  "limit": 2,
+  "color": "GREEN",
+  "sound": "audio/News Scrape Audio.wav"
 }
+
 
 ]
